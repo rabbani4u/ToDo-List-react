@@ -5,7 +5,11 @@ function ToDoItem(props) {
 
   function handleClick() {
     setIsDone(prevValue => {
-      return !prevValue;
+      if (prevValue === true) {
+        return false;
+      } else if (prevValue === false) {
+        return true;
+      }
     });
   }
 
